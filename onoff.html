@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+           
+        <img id="image-1" src="https://www.w3schools.com/js/pic_bulbon.gif">
+        <br>
+        <button onClick="clickOn()">On</button>
+        <button onClick="clickOff()">Off</button>
+        <br>
+        <img id="image-2" src="https://www.w3schools.com/js/pic_bulbon.gif">
+        <br>
+        <button onClick="onOff()">On/Off</button>
+        
+        
+        
+        <script>
+           var chk=true;
+           var on="https://www.w3schools.com/js/pic_bulbon.gif";
+           var off='https://www.w3schools.com/js/pic_bulboff.gif';
+           function clickOn(){
+             document.getElementById('image-1').src=on;
+           }
+           function clickOff(){
+             document.getElementById('image-1').src=off;
+           }
+            
+           function onOff(){
+              if(document.getElementById('image-2').src==on){
+                document.getElementById('image-2').src=off;
+              }
+              else{ document.getElementById('image-2').src=on;}
+           }
+            
+            
+        </script>    
+    </body>
+</html>
