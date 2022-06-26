@@ -1,0 +1,92 @@
+nav a{
+    color:#fff !important;
+}
+nav a:hover{
+    cursor: pointer;
+}
+button{
+    background-color: #8bbd23 !important;
+    border: none !important;;
+}
+
+/*            sign-in            */
+.registration-form{
+    border-top:30px solid #f01e28;
+    width:80%;
+    margin:20px auto;
+    padding:10px;
+    box-sizing: border-box;
+    box-shadow:0 0 2px 2px #ddd;
+}
+.registration-form h2{ border-left: 3px solid #f01e28;}
+
+#addingBlock{
+    border-top:30px solid  #1a1a1a;
+    border-top :30px solid #f01e28;
+    text-align: center;
+    width:30%;
+    margin:20px auto;
+    background-color: #fff;
+    box-shadow:0 0 2px 2px #ddd;
+    
+}
+
+
+
+#addingBlock h3{
+    width:50%;
+    margin:20px auto;
+
+ }
+#addingBlock input{
+    width:50%;
+    font-size:20px;
+    font-weight: bold; 
+    display: block;
+    border-radius:20px;
+    padding:5px 0 5px 0;
+    margin:20px auto;
+}
+#addingBlock button{
+    padding:7px;
+    border-radius:10px;
+    border:none;
+    color:#fff;
+    background-color:#1a1a1a;
+    background-color:#8bbd23;
+    margin:20px auto;
+}
+.card{
+    text-align:center;
+    padding:0;
+    margin:46px;
+}    
+.card-header{
+    padding:15px 0 15px 0;
+    background-color:#003366;
+    color:#fff;
+    border-radius: 20px 20px 0 0 !important;
+
+}
+.card .card-body .sts{
+    background-color: #427646;
+    padding:10px;
+    color:#fff;
+    border-radius: 20px;
+}
+
+.card .card-footer{
+    padding:0;
+    /*background-color: #f01e28; */
+    background-color: #dc3545;
+    padding:10px 0 10px 0;
+    border-radius:0 0 20px 20px;
+}
+.card .card-footer a{
+    width:100%;
+    color:#fff !important;
+
+}
+.card .card-footer a:hover{
+    cursor: pointer;
+}
