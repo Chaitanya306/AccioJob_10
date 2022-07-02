@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Max's Shopping App</title>
+</head>
+<body onload="fetchProducts()">
+    <!---------------------------------Navbar  --------------------------------------->
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc" width="30" height="30" class="d-inline-block align-top" alt="">
+        Max's Shopping
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item cart-nav-link">
+              <a class="nav-link" data-toggle="modal" data-target="#cartModal">Cart &nbsp
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="badge badge-light" id="cart-items-length">0</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+          
+        </div>
+    </nav>
+
+    <!--------------------------------- jumbotron --------------------------------------->
+
+    <div class="jumbotron main-header-section">
+        <h1 class="display-1">Welcome to<br>
+           <span class="brand-name">Max's</span><br>
+           Shopping App</h1>
+        <p class="lead">The one stop destination for all your shopping needs! Be it from fashion to electronics, you get it all here!</p>
+        <hr>
+        <a class="btn btn-lg btn-primary" href="#products" role="button">Explore</a>
+        <br>
+        <img src="assets/online-shop.gif"  class="jumbotron-img"/>
+        <br>
+        
+    </div>
+
+
+
+
+    <!--------------------------------- products --------------------------------------->    
+
+
+
+        
+    <div class="container">
+        
+        <div class="row" id="products">
+          <div id="products-spinner" class="spinner-border text-light" role="status"></div>
+           
+        </div>
+
+        <div class="row" id="about">
+          <h1 class="display-3">
+            About us
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
+            eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
+            Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
+            animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
+            tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
+            ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
+            non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
+            eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
+            Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
+            animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
+            tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
+            ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
+            non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae? Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Atque quisquam, obcaecati facere totam accusamus vitae in nobis
+            minima dolore tempora itaque earum similique numquam dolor inventore doloremque. Earum in esse eveniet natus
+            porro, non amet optio quos libero debitis accusantium qui quae illo voluptatibus tempora incidunt! Officia
+            corporis architecto rerum! Aut reprehenderit, explicabo sapiente cupiditate officiis maxime dicta suscipit.
+            Possimus sit perferendis sapiente ipsum dignissimos distinctio dolorem illo laudantium laboriosam accusamus!
+            Nostrum molestias tempore illo sequi culpa dolores atque aliquam excepturi similique tenetur voluptatibus,
+            numquam voluptas! Beatae quo consequuntur ducimus facilis molestiae eligendi quos quam ab aperiam placeat.
+            Voluptate, doloribus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic voluptate suscipit, labore voluptatem, pariatur
+            placeat neque, id quis soluta molestiae voluptatibus recusandae cumque perferendis voluptatum nihil corporis
+            rerum magnam eveniet! Aliquam delectus minus culpa ab commodi facere. Iste vel repellat doloribus, ullam
+            veritatis mollitia magnam, vero rem reiciendis laborum dolore.
+          </p>
+
+        </div>
+        <div class="row" id="contact">
+            
+            <div class="col-md-6 contact-1">
+              <h1><i class="fa fa-facebook-official" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-twitter-square" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-instagram" aria-hidden="true"></i></h1>
+            </div>
+            <div class="col-md-6 contact-2">
+              <h3>Contact us!</h3>
+              <h5><i class="fa fa-envelope" aria-hidden="true"></i>maxshop@gmail.com</h5>
+              <h5><i class="fa fa-phone-square" aria-hidden="true"></i>040-4352839</h5>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!----
+      <div class="contact-body">
+              <h1><i class="fa fa-facebook-official" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-twitter-square" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-instagram" aria-hidden="true"></i></h1>
+      </div>
+    
+    
+    
+    
+    
+    -->
+
+    <!-- Button trigger modal -->
+    
+
+<!---------------------------------------- Modal ------------------------------------>
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="cart-items-body">
+            <img src="assets/cart-empty.gif" alt="cart-empty" id="cart-empty-img">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Continue to Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="js/createItemsInCart.js"></script>    
+<script src="js/createProduct.js"></script>
+<script src="js/addToCart.js"></script>
+<script src="js/index.js"></script>    
+</body>
+</html>
