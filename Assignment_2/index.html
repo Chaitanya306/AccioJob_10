@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="index.css">
+  </head>  
+  <body>
+    
+    <div class="back">
+      <header class="backGround-black">
+        <h1>This is a <span>header</span> tag</h1>
+      </header>
+      <div class="backGround-black">
+        <h1>This is a usual h1 heading with div tag as a parent</h1>
+        <p>This is a usual paragraph, whichh is a direct child of div and direct sibling of h1</p>
+      </div>
+      <hr>
+      <div class="backGround-black">
+        <article>This is an article, I'm the only child of above    div</article>
+      </div>  
+      <hr>
+      <div class="backGround-black">
+       <section>This is an section, I'm the only child of above    div</section>    
+      </div>
+      <hr>  
+      <form class="backGround-black">
+        <h2>This is a h2 tag inside a form telling u guys that this is a feedback form</h2>
+        <legend>
+          <label>Enter your name:</label>
+          <input type="text">
+        </legend>
+        <legend>
+          <label>Enter your Email Id:</label>
+          <input type="email">
+        </legend>
+        <legend>
+          <label>Raring:</label>
+          <input type="number" min="1" max="10" id="num" onkeyup="check()" >
+        </legend>
+        <legend>
+          <p>Please select your web language:</p>
+          <br>
+          <input id="javascript"type="radio" value="Javascript">
+          <label for="javascript">Javascript</label>
+          <br>
+          <input id="java"type="radio" value="Java">
+          <label for="java">Java</label>
+        </legend>
+        <input id="submit" type="submit" value="Click Here to get redirected to Googel">
+      </form>
+    </div>
+    <div id="image">
+      <img src="car1.jpg">
+    </div>
+    <footer>
+      <h2>This is a footer</h2>
+    </footer>
+    
+  <script>
+    var num=document.getElementById("num");
+    function check(){
+      if(num.value<1||num.value>10){  num.value="";}
+    }
+    
+  </script>  
+  </body>
+
+  
+</html>  
