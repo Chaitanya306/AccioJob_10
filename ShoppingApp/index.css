@@ -1,0 +1,161 @@
+body{
+    background: linear-gradient(90deg,  rgba(132,28,60,1)0%,rgba(248,95,81,1)100%);  
+}
+
+.main-header-section.jumbotron{
+    text-align: center;
+    background-color: #fbe5d6;
+}
+.jumbotron-img{
+  /*  display:block;  */
+   /* margin:20px auto; */
+    height:300px;
+    
+}
+.brand-name{
+    background: linear-gradient(90deg,  rgba(132,28,60,1)0%,rgba(248,95,81,1)100%); 
+    padding:5px 30px;
+    color:#fff;
+    border-radius:60px;
+}
+.main-header-section.jumbotron hr{
+    margin-bottom:0;
+}
+.btn-primary{
+    background: linear-gradient(90deg,  rgba(132,28,60,1)0%,rgba(248,95,81,1)100%);
+    color:#fff;
+}
+.navbar{
+    background-color: #fbe5d6;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.nav-item:hover {
+	cursor: pointer;
+}
+.cart-nav-link:hover{
+    cursor: pointer;
+}
+
+.btn{
+    border:none
+}
+.btn:active{
+    box-shadow: none;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.navbar-brand img{
+    border-radius: 10px;
+    margin-right:2px;
+}
+#products {
+	padding-top: 60px;
+}
+
+#products-spinner {
+	margin: 50px auto;
+}
+
+.card.product{
+    margin:10px 0;
+}
+.card.product .card-img-top{
+    height:200px;
+}
+.card.product .btn-outer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.card.product .btn-outer .buy-btn {
+	flex: 1;
+	margin: 0 0 0 5px;
+}
+
+.card.product .btn-outer .add-to-cart-btn{
+	flex: 1;
+}
+.card.product .product-header{
+    display: flex;
+    justify-content: space-between;
+    height:39px;
+}
+#cart-items-body {
+	text-align: center;
+}
+
+#cart-empty-img {
+	height: 300px;
+}
+
+.cart-item-img {
+	padding: 25px;
+}
+
+.cart-image{
+    height:300px;
+
+}
+
+.fa-star.checked{
+    color:orange;
+}
+.card-title.product-price{
+    color:green;
+    margin-left:4px;
+}
+
+.card-text {
+	height: 72px;
+}
+
+.rating-count {
+	margin-left: 5px;
+}
+
+#about{
+    background-color:  #fbe5d6;
+    padding:0 50px;
+    margin:40px auto;
+    border-radius:10px;
+    
+}
+#about h1{
+    margin:30px auto;
+
+}
+#contact{
+    color:#3a3d49;
+    height:30vh;
+    background-color:  #fbe5d6;
+    padding:60px;
+}
+#contact h1{
+    font-size: 60px;
+}
+#contact hr{
+    color:#fac031;
+    font:10px;
+}
+
+#contact .contact-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#contact .contact-2{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+
+

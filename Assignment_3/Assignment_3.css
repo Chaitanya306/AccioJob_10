@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+img{
+    display: block;
+    width:100%;
+    height:auto;
+    
+}
+
+
+p{
+    font-size:0.9rem;
+    color:black;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{ color:blue;}
+
+/* header  */
+header {
+    background-color: #232f3e;
+    color:#fff;
+    font-family: inherit;
+    margin-bottom: 2%;
+    font-size: 0.9rem;
+}
+
+header ul{
+    display: flex;
+    width:80%;
+    margin-left: auto;
+    margin-right:auto;
+}
+header ul li{
+    list-style: none;
+    display: inline-block;
+    padding:1%;
+    margin-top:1%;
+    margin-bottom:1%;
+    border:2px solid #232f3e;
+    
+}
+header ul li:hover{
+    border-color:#fff;
+}
+/* main-container */
+.main-container{
+    width:100%;
+    height:auto;
+    display: flex;
+}
+
+.side-column{
+    width:20%;
+    border-right:2px solid #dedede; 
+}
+
+.side-column ul{
+    display:flex;
+    flex-direction: column;
+}
+.side-column ul li{
+    list-style: none;
+    display:block;
+    text-align: center;
+    padding:1%;
+    margin-top:1%;
+    margin-bottom:1%;
+    font-size: 0.9rem;
+}
+
+/* container   */
+.container{
+    width:80%;
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.container-div{
+    width:23%;
+    height:auto;
+    text-align: center;
+    margin:1%;
+}
+/* media Queries */
+@media screen and (max-width:1100px) {
+    .container-div{
+        width:31%;
+    }
+    .container-div p span.span-2{
+        display: none;
+    }   
+}
+@media screen and (max-width:1000px) {
+    .container-div{
+        width:31%;
+    }
+    .container-div p span.span-2,span.span-1{
+        display: none;
+    }   
+}
+
+@media screen and (max-width:797px) {
+    .container-div{
+        width:31%;
+    }
+    .container-div p span.span-2,span.span-1{
+        display: none;
+    }
+    .main-container .side-column{
+        display:none;
+    } 
+    .container{
+        margin-left:auto;
+        margin-right:auto;
+    }  
+}
+/*       */
+.container-img{
+    width:75%;
+    height:auto;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:8%;
+    margin-bottom:4%;
+}
+
+/* side-column */
+
+
