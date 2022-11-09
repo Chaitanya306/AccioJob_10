@@ -1,144 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-    <title>Max's Shopping App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Max's Shopping App</title>
 </head>
+
 <body onload="fetchProducts()">
-    <!---------------------------------Navbar  --------------------------------------->
+  <!---------------------------------Navbar  --------------------------------------->
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">
-        <img src="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc" width="30" height="30" class="d-inline-block align-top" alt="">
-        Max's Shopping
-      </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#products">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Us</a>
-            </li>
-            <li class="nav-item cart-nav-link">
-              <a class="nav-link" data-toggle="modal" data-target="#cartModal">Cart &nbsp
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span class="badge badge-light" id="cart-items-length">0</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Sign Up</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-          </ul>
-          
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://play-lh.googleusercontent.com/MiukRBVde88V8uZO2vO4htqIg5RjnU03JT7DYc4wIqe_5CoORTOrykyudYnDgUHMHrc"
+        width="30" height="30" class="d-inline-block align-top" alt="">
+      Max's Shopping
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!--------------------------------- jumbotron --------------------------------------->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </li>
+        <li class="nav-item cart-nav-link">
+          <a class="nav-link" data-toggle="modal" data-target="#cartModal">Cart &nbsp
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span class="badge badge-light" id="cart-items-length">0</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" data-toggle="modal" data-target="#signup" href="#">Sign Up</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" data-toggle="modal" data-target="#signin" href="#">Login</a>
+        </li>
+      </ul>
 
-    <div class="jumbotron main-header-section">
-        <h1 class="display-1">Welcome to<br>
-           <span class="brand-name">Max's</span><br>
-           Shopping App</h1>
-        <p class="lead">The one stop destination for all your shopping needs! Be it from fashion to electronics, you get it all here!</p>
-        <hr>
-        <a class="btn btn-lg btn-primary" href="#products" role="button">Explore</a>
-        <br>
-        <img src="assets/online-shop.gif"  class="jumbotron-img"/>
-        <br>
-        
+    </div>
+  </nav>
+
+  <!--------------------------------- jumbotron --------------------------------------->
+
+  <div class="jumbotron main-header-section">
+    <h1 class="display-1">Welcome to<br>
+      <span class="brand-name">Max's</span><br>
+      Shopping App
+    </h1>
+    <p class="lead">The one stop destination for all your shopping needs! Be it from fashion to electronics, you get it
+      all here!</p>
+    <hr>
+    <a class="btn btn-lg btn-primary" href="#products" role="button">Explore</a>
+    <br>
+    <img src="assets/online-shop.gif" class="jumbotron-img" />
+    <br>
+
+  </div>
+
+
+
+
+  <!--------------------------------- products --------------------------------------->
+
+
+
+
+  <div class="container">
+
+    <div class="row" id="products">
+      <div id="products-spinner" class="spinner-border text-light" role="status"></div>
+
     </div>
 
+    <div class="row" id="about">
+      <h1 class="display-3">
+        About us
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
+        eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
+        Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
+        animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
+        tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
+        ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
+        non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
+        eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
+        Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
+        animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
+        tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
+        ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
+        non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae? Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Atque quisquam, obcaecati facere totam accusamus vitae in nobis
+        minima dolore tempora itaque earum similique numquam dolor inventore doloremque. Earum in esse eveniet natus
+        porro, non amet optio quos libero debitis accusantium qui quae illo voluptatibus tempora incidunt! Officia
+        corporis architecto rerum! Aut reprehenderit, explicabo sapiente cupiditate officiis maxime dicta suscipit.
+        Possimus sit perferendis sapiente ipsum dignissimos distinctio dolorem illo laudantium laboriosam accusamus!
+        Nostrum molestias tempore illo sequi culpa dolores atque aliquam excepturi similique tenetur voluptatibus,
+        numquam voluptas! Beatae quo consequuntur ducimus facilis molestiae eligendi quos quam ab aperiam placeat.
+        Voluptate, doloribus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic voluptate suscipit, labore voluptatem, pariatur
+        placeat neque, id quis soluta molestiae voluptatibus recusandae cumque perferendis voluptatum nihil corporis
+        rerum magnam eveniet! Aliquam delectus minus culpa ab commodi facere. Iste vel repellat doloribus, ullam
+        veritatis mollitia magnam, vero rem reiciendis laborum dolore.
+      </p>
 
-
-
-    <!--------------------------------- products --------------------------------------->    
-
-
-
-        
-    <div class="container">
-        
-        <div class="row" id="products">
-          <div id="products-spinner" class="spinner-border text-light" role="status"></div>
-           
-        </div>
-
-        <div class="row" id="about">
-          <h1 class="display-3">
-            About us
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
-            eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
-            Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
-            animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
-            tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
-            ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
-            non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis voluptates architecto dignissimos
-            eum expedita accusantium. Vel doloribus minus quod et pariatur tempora ullam consequuntur dolorem tempore illum?
-            Atque labore quod quidem velit assumenda quaerat quasi tenetur. Rerum, doloribus ex. Illo, ab! Officiis saepe
-            animi optio numquam esse consequatur odio, dolorum possimus, molestias voluptatum, quis facilis. Quam, ullam
-            tempora nostrum illum molestiae consequatur eveniet praesentium ex pariatur obcaecati expedita quae dolorum
-            ipsam nihil debitis nam soluta nulla ut temporibus, minus quo labore non. Tempore, magnam? Consequatur, corporis
-            non asperiores eaque quasi aspernatur et vitae cumque inventore impedit nam dolorem repudiandae? Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Atque quisquam, obcaecati facere totam accusamus vitae in nobis
-            minima dolore tempora itaque earum similique numquam dolor inventore doloremque. Earum in esse eveniet natus
-            porro, non amet optio quos libero debitis accusantium qui quae illo voluptatibus tempora incidunt! Officia
-            corporis architecto rerum! Aut reprehenderit, explicabo sapiente cupiditate officiis maxime dicta suscipit.
-            Possimus sit perferendis sapiente ipsum dignissimos distinctio dolorem illo laudantium laboriosam accusamus!
-            Nostrum molestias tempore illo sequi culpa dolores atque aliquam excepturi similique tenetur voluptatibus,
-            numquam voluptas! Beatae quo consequuntur ducimus facilis molestiae eligendi quos quam ab aperiam placeat.
-            Voluptate, doloribus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic voluptate suscipit, labore voluptatem, pariatur
-            placeat neque, id quis soluta molestiae voluptatibus recusandae cumque perferendis voluptatum nihil corporis
-            rerum magnam eveniet! Aliquam delectus minus culpa ab commodi facere. Iste vel repellat doloribus, ullam
-            veritatis mollitia magnam, vero rem reiciendis laborum dolore.
-          </p>
-
-        </div>
-        <div class="row" id="contact">
-            
-            <div class="col-md-6 contact-1">
-              <h1><i class="fa fa-facebook-official" aria-hidden="true"></i></h1>
-              <h1><i class="fa fa-twitter-square" aria-hidden="true"></i></h1>
-              <h1><i class="fa fa-instagram" aria-hidden="true"></i></h1>
-            </div>
-            <div class="col-md-6 contact-2">
-              <h3>Contact us!</h3>
-              <h5><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;maxshop@gmail.com</h5>
-              <h5><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;040-4352839</h5>
-            </div>
-            
-        </div>
-        
     </div>
-    <!----
+    <div class="row" id="contact">
+
+      <div class="col-md-6 contact-1">
+        <h1><i class="fa fa-facebook-official" aria-hidden="true"></i></h1>
+        <h1><i class="fa fa-twitter-square" aria-hidden="true"></i></h1>
+        <h1><i class="fa fa-instagram" aria-hidden="true"></i></h1>
+      </div>
+      <div class="col-md-6 contact-2">
+        <h3>Contact us!</h3>
+        <h5><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;maxshop@gmail.com</h5>
+        <h5><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;040-4352839</h5>
+      </div>
+
+    </div>
+
+  </div>
+  <!----
       <div class="contact-body">
               <h1><i class="fa fa-facebook-official" aria-hidden="true"></i></h1>
               <h1><i class="fa fa-twitter-square" aria-hidden="true"></i></h1>
@@ -151,33 +164,185 @@
     
     -->
 
-    <!-- Button trigger modal -->
-    
+  <!-- Button trigger modal -->
 
-<!---------------------------------------- Modal ------------------------------------>
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="cart-items-body">
-            <img src="assets/cart-empty.gif" alt="cart-empty" id="cart-empty-img">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Continue to Buy</button>
-          </div>
+
+  <!---------------------------------------- Modal ------------------------------------>
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="cart-items-body">
+          <img src="assets/cart-empty.gif" alt="cart-empty" id="cart-empty-img">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Continue to Buy</button>
         </div>
       </div>
     </div>
+  </div>
 
-<script src="js/createItemsInCart.js"></script>    
-<script src="js/createProduct.js"></script>
-<script src="js/addToCart.js"></script>
-<script src="js/index.js"></script>    
+  <!--------------------------------        Signup   -------------------------------------------->
+  <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" required>
+              <div class="invalid-feedback" id="invalid-feedback-firstName">
+                firstname can't be empty
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" required>
+              <div class="invalid-feedback" id="invalid-feedback-lastName">
+                lastname can't be empty
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="signupemail">Email</label>
+              <input type="email" class="form-control" id="signupemail" required>
+              <div class="invalid-feedback" id="invalid-feedback-email">
+                please provide a valid email
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="signuppassword">Password</label>
+              <input type="password" class="form-control" id="signuppassword" required>
+              <div class="invalid-feedback" id="invalid-feedback-password">
+                passord length must be >=8
+                <br>
+                must contain letter,digit,character
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom03">City</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+
+              <div class="invalid-feedback" id="invalid-feedback-city">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom04">State</label>
+              <select class="custom-select" id="validationCustom04" required>
+                <option value="" selected disabled>...</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-feedback-state">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">Zip</label>
+              <input type="text" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback" id="invalid-feedback-zipCode">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback" id="invalid-feedback-tandc">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <p id="signedUpSuccessfully">Signed Up Successfully!</p>
+          <button class="btn btn-primary" type="button" onclick="signingUp()">Submit form</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-----------------------------Sign in ---------------------------->
+  <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="needs-validation" novalidate>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="signinemail">Email</label>
+              <input type="email" class="form-control" id="signinemail" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="signinpassword">Password</label>
+              <input type="password" class="form-control" id="signinpassword" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="button">Submit form</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/createItemsInCart.js"></script>
+  <script src="js/createProduct.js"></script>
+  <script src="js/addToCart.js"></script>
+  <script src="js/signUp.js"></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
