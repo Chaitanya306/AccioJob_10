@@ -128,6 +128,8 @@ body{
     margin:30px auto;
 
 }
+
+
 #contact{
     color:#3a3d49;
     height:30vh;
@@ -152,6 +154,27 @@ body{
     flex-direction: column;
     
 }
+
+#signup form,#signin form{
+    padding:20px;
+}
+
+/*                 invalid-feedback is a bootstrap class     default display value is none         */     
+/*
+.invalid-feedback{
+    display: block; 
+}
+*/
+.invalid{ display: block; }
+.valid{ display:none; }
+
+
+#signedUpSuccessfully{
+    color:green;
+    text-align: center;
+    visibility: hidden;
+}
+
 
 
 
